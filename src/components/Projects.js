@@ -52,7 +52,7 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
     setCurrentIndex(currentIndex +1)
   
     if(currentIndex === 0) {
-      seth1Tag("Blog posts")
+      seth1Tag("Here you can post blogs")
     }
     if(currentIndex === 1) {
       seth1Tag("Message friends")
@@ -87,12 +87,12 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
         <div className="w-full bg-white py-16 px-4">
           <h1 className="text-[#00df9a] font-bold p-2 uppercase text-3xl"> MY PROJECTS.</h1>
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-            <img style={{objectFit: "contain", height: "auto"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides[`${currentIndex}`].url} alt="/"/>
+            <img style={{objectFit: "contain", maxHeight: "280px"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides[`${currentIndex}`].url} alt="/"/>
             <div className="flex flex-col justify-center">
               <p className="text-[#00df9a] uppercase font-bold m-2">
                 Fullstack project
               </p>
-              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag} {currentIndex +1}/{total}</h1>
+              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag} <br/><span className="text-black/40">{currentIndex +1}/{total}</span></h1>
               <p className="m-4 font-bold">Built using Nodejs, React, SQL, Express and Axios</p>
               <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage}>Next Image</button>
             </div>
@@ -102,13 +102,13 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
       </div>
       <div className="w-full bg-white py-16 px-4">
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-            <img style={{objectFit: "contain", height: "auto"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"/>
+            <img style={{objectFit: "contain", maxHeight: "280px"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"/>
            
             <div className="flex flex-col justify-center">
               <p className="text-[#00df9a] uppercase font-bold m-2">
                Netflix clone
               </p>
-              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag2} {currentIndex2 +1}/{total2}</h1>
+              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag2} <br/><span className="text-black/40">{currentIndex2 +1}/{total2}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind & Axios</p>
               <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage2}>Next Image</button>
             </div>
