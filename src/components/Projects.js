@@ -33,13 +33,13 @@ const [h1Tag2, seth1Tag2] = useState("")
 
   useEffect(() => {
 seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
-  },[currentIndex])
+  },[])
   useEffect(() => {
     seth1Tag2(currentIndex2 === 0 ? "Movie categories" : "Movie categories")
-      },[currentIndex2])
+      },[])
   const total = slides.length
   const total2 = slides2.length
-
+ 
 
   const slideImage = () => {
     
