@@ -4,6 +4,8 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
 
+
+
 function App() {
   return (
     
@@ -12,7 +14,7 @@ function App() {
        <Home/>
        <Projects/>
        <Footer/>
-
+      
     
     </div>
   );
