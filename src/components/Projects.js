@@ -33,10 +33,10 @@ const [h1Tag2, seth1Tag2] = useState("")
 
   useEffect(() => {
 seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
-  },[])
+  },[currentIndex])
   useEffect(() => {
     seth1Tag2(currentIndex2 === 0 ? "Movie categories" : "Movie categories")
-      },[])
+      },[currentIndex2])
   const total = slides.length
   const total2 = slides2.length
 
@@ -87,7 +87,7 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
         <div className="w-full bg-white py-16 px-4">
           <h1 className="text-[#00df9a] font-bold p-2 uppercase text-3xl"> MY PROJECTS.</h1>
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-            <img style={{objectFit: "contain", maxHeight: "280px"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides[`${currentIndex}`].url} alt="/"/>
+            <img style={{objectFit: "contain", maxHeight: "280px"}}className="block w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"/>
             <div className="flex flex-col justify-center">
               <p className="text-[#00df9a] uppercase font-bold m-2">
                 Fullstack project
