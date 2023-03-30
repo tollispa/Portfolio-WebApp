@@ -21,7 +21,7 @@ const Home = () => {
   <p className="md:text-5xl sm:text-4xl text-xl font-bold">Knowlegde in </p>
   <Typed 
   className="md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 p-2"
-  strings={["REACT", "HTML","CSS", "TAILWIND", "SQL", "NODEJS", "JAVASCRIPT"]} typeSpeed={110} backSpeed={70} loop/>
+  strings={["REACT", "HTML","CSS", "TAILWIND", "SQL", "NODEJS", "JAVASCRIPT"]} typeSpeed={115} backSpeed={70} loop/>
 </div>
 <p className="md:text-2xl text-xl font-bold text-gray-500">29 Years old born in Stockholm. Love creating Webb Applications</p>
       
