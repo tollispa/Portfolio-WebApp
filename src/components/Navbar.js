@@ -19,7 +19,7 @@ const Navbar = () => {
             {!nav ? <AiOutlineClose size={20}/> :  <AiOutlineMenu size={20}/>}
            
         </div>
-        <div className={!nav ? "fixed left-0 top-0 w-[60%] border-r border-r-gray-1200 bg-black ease-in-out duration-500" : "fixed left-[-100%]"}>
+        <div className={!nav ? "fixed left-0 top-0 w-[60%] border-r border-r-gray-1200 bg-black ease-in-out duration-500 md:hidden" : "fixed left-[-100%]"}>
        
         <ul className=" uppercase p-4">
             <li className="p-4 border-b border-gray-600">Home</li>
