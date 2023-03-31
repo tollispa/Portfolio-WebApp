@@ -82,12 +82,15 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
    }
   }
  
+
     return (
       <>
         <div id ="projects"className="w-full bg-white py-0 px-4">
           <h1 className="text-[#00df9a] font-bold p-2 uppercase text-3xl"> MY PROJECTS.</h1>
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-            <img style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px"}}className="block w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"/>
+            <img 
+            onClick={() => window.location.href='https://github.com/tollispa/Fullstack-App-with-React-SQL-Express'}
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"/>
             <div className="flex flex-col justify-center">
               <p className="text-[#00df9a] uppercase font-bold m-2 sm:text-4xl">
                 Fullstack project
@@ -102,7 +105,9 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
       </div>
       <div className="w-full bg-white py-16 px-4">
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-            <img style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"/>
+            <img 
+            onClick={() => window.location.href="https://github.com/tollispa/Netflix-clone"}
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"/>
            
             <div className="flex flex-col justify-center">
               <p className="text-[#00df9a] uppercase font-bold m-2 sm:text-4xl">
