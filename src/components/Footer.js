@@ -1,4 +1,5 @@
 import { FaInstagram, FaGithub, FaLinkedin, FaArrowUp } from 'react-icons/fa';
+
 import { Link } from 'react-scroll';
 const Footer = () => {
     return (
@@ -16,6 +17,7 @@ const Footer = () => {
 
     </a>
     <a href="#">
+ 
 <FaInstagram style={{color: "#E1306C"}}size={40}/>
 </a>
 <a href="https://github.com/tollispa">

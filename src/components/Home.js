@@ -1,5 +1,5 @@
 
-import Typed from "react-typed"
+
 
 
 const Home = () => {
@@ -17,12 +17,7 @@ const Home = () => {
       <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
 <p className="text-[#00df9a] font-bold p-2 uppercase text-xl">Welcome to my page!</p>
 <h1 className="md:text-6xl sm:text-6xl text4-xl font-bold md:py-6">TOLLIS PAPADOPOULOS</h1>
-<div className="flex justify-center items-center">
-  <p className="md:text-5xl sm:text-4xl text-xl font-bold">Knowlegde in </p>
-  <Typed 
-  className="md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 p-2"
-  strings={["REACT", "HTML","CSS", "TAILWIND", "SQL", "NODEJS", "JAVASCRIPT"]} typeSpeed={115} backSpeed={70} loop/>
-</div>
+
 <p className="md:text-2xl text-xl font-bold text-gray-500">29 Years old born in Stockholm. Love creating Webb Applications</p>
       
       </div>
