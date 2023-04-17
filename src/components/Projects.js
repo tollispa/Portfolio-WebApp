@@ -6,15 +6,26 @@ import img5 from "../ImageOfProjects/5.png"
 import img6 from "../ImageOfProjects/6.png"
 import img7 from "../ImageOfProjects/7.png"
 import img8 from "../ImageOfProjects/8.png"
+import img9 from "../ImageOfProjects/9.png"
+import img10 from "../ImageOfProjects/10.png"
+import img11 from "../ImageOfProjects/11.png"
+import img12 from "../ImageOfProjects/12.png"
+
+
+
 
 import { useState , useEffect} from "react"
 
 const Projects = () => {
 const [currentIndex, setCurrentIndex] = useState(0)
 const [currentIndex2, setCurrentIndex2] = useState(0)
+const [currentIndex3, setCurrentIndex3] = useState(0)
+
 
 const [h1Tag, seth1Tag] = useState("")
 const [h1Tag2, seth1Tag2] = useState("")
+const [h1Tag3, seth1Tag3] = useState("")
+
   const slides = [
     {url: img1},
     {url: img2},
@@ -30,6 +41,14 @@ const [h1Tag2, seth1Tag2] = useState("")
     {url: img8},
   
   ]
+  const slides3 = [
+    {url: img9},
+    {url: img10},
+    {url: img11},
+    {url: img12},
+  
+  ]
+
 
   useEffect(() => {
 seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
@@ -37,8 +56,13 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
   useEffect(() => {
     seth1Tag2(currentIndex2 === 0 ? "Movie categories" : "Movie categories")
       },[])
+
+      useEffect(() => {
+        seth1Tag3(currentIndex3 === 0 ? "Choose Quiz Category" : "Choose Quiz Category")
+          },[])
   const total = slides.length
   const total2 = slides2.length
+  const total3 = slides3.length
  
 
   const slideImage = () => {
@@ -82,6 +106,26 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
    }
   }
  
+  const slideImage3 = () => {
+    if (currentIndex3 >= total3 -1){
+     setCurrentIndex3(0)
+     seth1Tag3("Quiz categories")
+     return
+      
+   }
+   setCurrentIndex3(currentIndex3 +1)
+ 
+   if(currentIndex3 === 0) {
+     seth1Tag3("Quiz Correct Answer")
+   }
+   if(currentIndex3 === 1) {
+     seth1Tag3("Quiz Wrong answer")
+   }
+   if(currentIndex3 === 2) {
+     seth1Tag3("Final question")
+   }
+  }
+ 
 
     return (
       <>
@@ -116,6 +160,26 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
               <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage2}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag2} <br/><span className="text-black/40">{currentIndex2 +1}/{total2}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind & Axios</p>
+            </div>
+
+          </div>
+       
+      </div>
+      <div className="w-full bg-white py-16 px-4">
+          <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
+            <img 
+            onClick={() => window.location.href="https://github.com/tollispa/javascript-quiz-app"}
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides3[`${currentIndex3}`].url} alt="/"/>
+           
+            <div className="flex flex-col justify-center">
+              <p className="text-[#00df9a] uppercase font-bold m-2 sm:text-4xl">
+              Quiz
+              </p>
+              <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage3}>Next Image</button>
+              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag3} <br/><span className="text-black/40">{currentIndex3 +1}/{total3}</span></h1>
+              <p className=" m-4 font-bold">Built using React & Tailwind</p>
+              <a className="text-blue-400 underline" href="https://master--cosmic-axolotl-607d43.netlify.app/?fbclid=IwAR2g7kgHOIHxJZdq3ZhdJqPDcq8FmCBrqN2wgcZjUAs70EdSJyIcC6phjhQ" target="_blank" rel="noopener noreferrer">Go to Quiz website</a>
+
             </div>
 
           </div>
