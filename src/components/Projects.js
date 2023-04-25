@@ -14,7 +14,7 @@ import img12 from "../ImageOfProjects/12.png"
 
 
 
-import { useState , useEffect} from "react"
+import { useState} from "react"
 
 const Projects = () => {
 const [currentIndex, setCurrentIndex] = useState(0)
@@ -22,9 +22,9 @@ const [currentIndex2, setCurrentIndex2] = useState(0)
 const [currentIndex3, setCurrentIndex3] = useState(0)
 
 
-const [h1Tag, seth1Tag] = useState("")
-const [h1Tag2, seth1Tag2] = useState("")
-const [h1Tag3, seth1Tag3] = useState("")
+const [h1Tag, seth1Tag] = useState("Login Page")
+const [h1Tag2, seth1Tag2] = useState("Movie Categories")
+const [h1Tag3, seth1Tag3] = useState("Choose Caterogy")
 
   const slides = [
     {url: img1},
@@ -50,17 +50,7 @@ const [h1Tag3, seth1Tag3] = useState("")
   ]
 
 
-  useEffect(() => {
-seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
-  },[currentIndex])
-  useEffect(() => {
-    seth1Tag2(currentIndex2 === 0 ? "Movie categories" : "Movie categories")
-   
-      },[currentIndex2])
 
-      useEffect(() => {
-        seth1Tag3(currentIndex3 === 0 ? "Choose Quiz Category" : "Choose Quiz Category")
-          },[currentIndex3])
   const total = slides.length
   const total2 = slides2.length
   const total3 = slides3.length
