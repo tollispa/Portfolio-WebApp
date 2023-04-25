@@ -52,14 +52,15 @@ const [h1Tag3, seth1Tag3] = useState("")
 
   useEffect(() => {
 seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
-  },[])
+  },[currentIndex])
   useEffect(() => {
     seth1Tag2(currentIndex2 === 0 ? "Movie categories" : "Movie categories")
-      },[])
+   
+      },[currentIndex2])
 
       useEffect(() => {
         seth1Tag3(currentIndex3 === 0 ? "Choose Quiz Category" : "Choose Quiz Category")
-          },[])
+          },[currentIndex3])
   const total = slides.length
   const total2 = slides2.length
   const total3 = slides3.length
