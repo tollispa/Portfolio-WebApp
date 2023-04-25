@@ -52,14 +52,15 @@ const [h1Tag3, seth1Tag3] = useState("")
 
   useEffect(() => {
 seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
-  },[])
+  },[currentIndex])
   useEffect(() => {
     seth1Tag2(currentIndex2 === 0 ? "Movie categories" : "Movie categories")
-      },[])
+   
+      },[currentIndex2])
 
       useEffect(() => {
         seth1Tag3(currentIndex3 === 0 ? "Choose Quiz Category" : "Choose Quiz Category")
-          },[])
+          },[currentIndex3])
   const total = slides.length
   const total2 = slides2.length
   const total3 = slides3.length
@@ -142,6 +143,8 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
               <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag} <br/><span className="text-black/40">{currentIndex +1}/{total}</span></h1>
               <p className="m-4 font-bold">Built using Nodejs, React, SQL, Express and Axios</p>
+              <p className="m-2 shadow-lg p-2 rounded bg-slate-100">This project is a social networking platform that allows users to register an account, login securely, and create a profile page with an avatar. Users can post blogs and interact with other users by sending messages and adding friends. The platform also provides the option to delete friends and manage friend requests. </p>
+
             </div>
 
           </div>
@@ -160,6 +163,8 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
               <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage2}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag2} <br/><span className="text-black/40">{currentIndex2 +1}/{total2}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind & Axios</p>
+              <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">This Netflix clone project is a frontend-only project that displays a user interface similar to the popular video streaming service, Netflix. The platform displays a large collection of movies and TV shows, categorized by genre, rating, and popularity, with no backend functionality. Users can click on a specific movie to go to a Single Movie page for more info about that movie.</p>
+
             </div>
 
           </div>
@@ -178,6 +183,12 @@ seth1Tag(currentIndex === 0 ? "Login Page" : "Login Page")
               <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage3}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag3} <br/><span className="text-black/40">{currentIndex3 +1}/{total3}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind</p>
+              <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">This quiz project is an interactive platform that allows users to test their knowledge on various topics through a quiz. The quiz has multiple categories to choose from, and each category has over 10+ questions. The questions in each category are randomized using a function, ensuring that each user gets a unique set of questions every time they take the quiz.
+
+When a user clicks on a category, they are presented with five questions to answer. After completing the quiz, the user is provided with their score and the option to see their wrong answers, allowing them to learn from their mistakes.</p>
+
+              
+
               <a className="text-blue-400 underline" href="https://master--cosmic-axolotl-607d43.netlify.app/?fbclid=IwAR2g7kgHOIHxJZdq3ZhdJqPDcq8FmCBrqN2wgcZjUAs70EdSJyIcC6phjhQ" target="_blank" rel="noopener noreferrer">Go to Quiz website</a>
 
             </div>

@@ -1,4 +1,6 @@
-import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai"
+import {AiOutlineClose, AiOutlineMenu,} from "react-icons/ai"
+import { FaInstagram, FaGithub, FaLinkedin} from 'react-icons/fa';
+
 import { Link } from 'react-scroll';
 
 import {useState} from "react"
@@ -46,7 +48,7 @@ const Navbar = () => {
             {!nav ? <AiOutlineClose size={20}/> :  <AiOutlineMenu size={20}/>}
            
         </div>
-        <div className={!nav ? "absolute left-0 top-0 w-[60%] border-r border-r-gray-1200 bg-black ease-in-out duration-500 md:hidden" : "fixed left-[-100%]"}>
+        <div className={!nav ? "absolute left-0 top-0 w-[70%] h-[30%] border-r border-r-gray-1200 bg-black ease-in-out duration-500 md:hidden" : "fixed left-[-100%]"}>
        
         <ul className="uppercase p-4">
             <li className="p-4 border-b border-gray-600 cursor-pointer">
@@ -76,6 +78,15 @@ const Navbar = () => {
             <li className="p-4 border-b border-gray-600 cursor-pointer">
             <a href="mailto:tollis.123@hotmail.com">Email</a>
             </li>
+            <div className=" relative">
+                <div className="absolute top-10 flex gap-2">
+                <FaGithub size={40}/>
+                <FaInstagram size={40}/>
+                <FaLinkedin size={40}/>
+                </div>
+        
+            </div>
+            
 
           
 
