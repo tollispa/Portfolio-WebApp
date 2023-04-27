@@ -10,6 +10,8 @@ import img9 from "../ImageOfProjects/9.png"
 import img10 from "../ImageOfProjects/10.png"
 import img11 from "../ImageOfProjects/11.png"
 import img12 from "../ImageOfProjects/12.png"
+import img13 from "../ImageOfProjects/13.png"
+import img14 from "../ImageOfProjects/14.png"
 
 
 
@@ -20,11 +22,15 @@ const Projects = () => {
 const [currentIndex, setCurrentIndex] = useState(0)
 const [currentIndex2, setCurrentIndex2] = useState(0)
 const [currentIndex3, setCurrentIndex3] = useState(0)
+const [currentIndex4, setCurrentIndex4] = useState(0)
+
 
 
 const [h1Tag, seth1Tag] = useState("Login Page")
 const [h1Tag2, seth1Tag2] = useState("Movie Categories")
 const [h1Tag3, seth1Tag3] = useState("Choose Caterogy")
+const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
+
 
   const slides = [
     {url: img1},
@@ -48,12 +54,18 @@ const [h1Tag3, seth1Tag3] = useState("Choose Caterogy")
     {url: img12},
   
   ]
-
+  const slides4 = [
+    {url: img13},
+    {url: img14}
+ 
+  
+  ]
 
 
   const total = slides.length
   const total2 = slides2.length
   const total3 = slides3.length
+  const total4 = slides4.length
  
 
   const slideImage = () => {
@@ -117,11 +129,26 @@ const [h1Tag3, seth1Tag3] = useState("Choose Caterogy")
    }
   }
  
+  const slideImage4 = () => {
+    if (currentIndex4 >= total4 -1){
+     setCurrentIndex4(0)
+     seth1Tag4("Easy Game Mode")
+     return
+      
+   }
+   setCurrentIndex4(currentIndex3 +1)
+ 
+   if(currentIndex4 === 0) {
+     seth1Tag4("Hard Game Mode")
+   }
+ 
+  
+  }
 
     return (
       <>
         <div id ="projects"className="w-full bg-white py-0 px-4">
-          <h1 className="text-[#00df9a] font-bold p-2 uppercase text-3xl"> MY PROJECTS.</h1>
+          <h1 className="text-[#00df9a] font-bold p-2 uppercase text-3xl"> SOME OF MY PROJECTS.</h1>
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
             <img 
             onClick={() => window.location.href='https://github.com/tollispa/Fullstack-App-with-React-SQL-Express'}
@@ -180,6 +207,30 @@ When a user clicks on a category, they are presented with five questions to answ
               
 
               <a className="text-blue-400 underline" href="https://master--cosmic-axolotl-607d43.netlify.app/?fbclid=IwAR2g7kgHOIHxJZdq3ZhdJqPDcq8FmCBrqN2wgcZjUAs70EdSJyIcC6phjhQ" target="_blank" rel="noopener noreferrer">Go to Quiz website</a>
+
+            </div>
+
+          </div>
+       
+      </div>
+      <div className="w-full bg-white py-16 px-4">
+          <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
+            <img 
+            onClick={() => window.location.href="https://github.com/tollispa/Pair-cards-game"}
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides4[`${currentIndex4}`].url} alt="/"/>
+           
+            <div className="flex flex-col justify-center">
+              <p className="text-[#00df9a] uppercase font-bold m-2 sm:text-4xl">
+              Picture Pairing Game
+              </p>
+              <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage4}>Next Image</button>
+              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag4} <br/><span className="text-black/40">{currentIndex4 +1}/{total4}</span></h1>
+              <p className=" m-4 font-bold">Built using React & Tailwind</p>
+              <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">In this game the player has to pair 2 pictures that "matches", for each match the "Cards left to pair" goes down. When it reaches 0, that means the player has paired all pictures displaying on the page correctly and the game ends.</p>
+
+              
+
+              <a className="text-blue-400 underline" href="https://fascinating-gecko-27250f.netlify.app/?fbclid=IwAR2q2PXpdJb4NVabtbiyXdeeHfyrLYtk6NgG4qcMUyVit1VVWbxgb0GUv4Y" target="_blank" rel="noopener noreferrer">Go to Picture Pair Game website</a>
 
             </div>
 
