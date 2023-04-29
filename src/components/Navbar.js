@@ -14,8 +14,8 @@ const Navbar = () => {
     return (
         <div className="text-white flex justify-between items-center h-24 mx-auto px-4 max-w-[1240px]">
         <h1 className="w-full text-3xl font-bold text-[#00df9a]">Tollis Papadopoulos.</h1>
-        <ul className="hidden md:flex">
-            <li className="p-4 cursor-pointer">
+        <ul className="hidden md:flex uppercase">
+            <li className="p-4 cursor-pointer hover:text-gray-300">
             <Link
                      to="skills"
                      smooth={true}
@@ -27,7 +27,7 @@ const Navbar = () => {
                     Skills
                     </Link>
             </li>
-            <li className="p-4 cursor-pointer">
+            <li className="p-4 cursor-pointer hover:text-gray-300">
                     <Link
                      to="projects"
                      smooth={true}
@@ -39,7 +39,7 @@ const Navbar = () => {
                      Projects
                     </Link>
 </li>
-         <li className="p-4 cursor-pointer">
+         <li className="p-4 cursor-pointer hover:text-gray-300">
                <a href="mailto:tollis.123@hotmail.com">Email</a>
          </li>
 
