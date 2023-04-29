@@ -148,18 +148,20 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
     return (
       <>
         <div id ="projects"className="w-full bg-white py-0 px-4 border-b-2 border-gray-300">
-          <h1 className="text-blue-400 shadow-lg inline-block rounded m-2 font-bold p-2 uppercase sm:text-2xl text-xl">PROJECTS.</h1>
+          <h1 className="text-blue-400 inline-block rounded mb-4 font-bold p-2 uppercase sm:text-2xl text-xl">here are some of my projects.</h1>
          
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-          <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl">
-                Fullstack project
+          <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
+                Fullstack project.
               </p>
             <img 
             onClick={() => window.location.href='https://github.com/tollispa/Fullstack-App-with-React-SQL-Express'}
-            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"/>
-            <div className="flex flex-col justify-center">
-            
-              <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage}>Next Image</button>
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"/>
+            <div className="flex flex-col justify-center shadow-lg p-4 rounded sm:mb-10 sm:p-3">
+            <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
+                Fullstack project.
+              </p>
+              <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag} <br/><span className="text-black/40">{currentIndex +1}/{total}</span></h1>
               <p className="m-4 font-bold">Built using Nodejs, React, SQL, Express and Axios</p>
               <p className="m-2 shadow-lg p-2 rounded bg-slate-100">This project is a social networking platform that allows users to register an account, login securely, and create a profile page with an avatar. Users can post blogs and interact with other users by sending messages and adding friends. The platform also provides the option to delete friends and manage friend requests. </p>
@@ -171,15 +173,18 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
       </div>
       <div className="w-full bg-white py-16 px-4 border-b-2 border-gray-300">
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-              <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl">
-               Netflix clone
+              <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
+               Netflix clone.
               </p>
             <img 
             onClick={() => window.location.href="https://github.com/tollispa/Netflix-clone"}
             style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"/>
            
-            <div className="flex flex-col justify-center">
-              <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage2}>Next Image</button>
+            <div className="flex flex-col justify-center shadow-lg rounded sm:p-3">
+            <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
+               Netflix clone.
+              </p>
+              <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage2}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag2} <br/><span className="text-black/40">{currentIndex2 +1}/{total2}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind & Axios</p>
               <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">This Netflix clone project is a frontend-only project that displays a user interface similar to the popular video streaming service, Netflix. The platform displays a large collection of movies and TV shows, categorized by genre, rating, and popularity, with no backend functionality. Users can click on a specific movie to go to a Single Movie page for more info about that movie.</p>
@@ -191,15 +196,18 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
       </div>
       <div className="w-full bg-white py-16 px-4 border-b-2 border-gray-300">
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-              <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl">
-              Quiz
+              <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
+              Quiz App.
               </p>
             <img 
             onClick={() => window.location.href="https://github.com/tollispa/javascript-quiz-app"}
             style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides3[`${currentIndex3}`].url} alt="/"/>
            
-            <div className="flex flex-col justify-center">
-              <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage3}>Next Image</button>
+            <div className="flex flex-col justify-center shadow-lg sm:p-4 sm:m-3">
+            <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
+              Quiz App.
+              </p>
+              <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage3}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag3} <br/><span className="text-black/40">{currentIndex3 +1}/{total3}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind</p>
               <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">This quiz project is an interactive platform that allows users to test their knowledge on various topics through a quiz. The quiz has multiple categories to choose from, and each category has over 10+ questions. The questions in each category are randomized using a function, ensuring that each user gets a unique set of questions every time they take the quiz.
@@ -217,15 +225,18 @@ When a user clicks on a category, they are presented with five questions to answ
       </div>
       <div className="w-full bg-white py-16 px-4">
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
-              <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-4xl">
-              Picture Pairing Game
+              <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-4xl sm:hidden">
+              Picture Pairing Game.
               </p>
             <img 
             onClick={() => window.location.href="https://github.com/tollispa/Pair-cards-game"}
             style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides4[`${currentIndex4}`].url} alt="/"/>
            
-            <div className="flex flex-col justify-center">
-              <button className="bg-black w-36 text-white rounded py-4 m-4" onClick={slideImage4}>Next Image</button>
+            <div className="flex flex-col justify-center shadow sm:p-3 sm:m-3 rounded">
+            <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-2xl sm:block hidden">
+              Picture Pairing Game.
+              </p>
+              <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage4}>Next Image</button>
               <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag4} <br/><span className="text-black/40">{currentIndex4 +1}/{total4}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind</p>
               <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">In this game the player has to pair 2 pictures that "matches", for each match the "Cards left to pair" goes down. When it reaches 0, that means the player has paired all pictures displaying on the page correctly and the game ends.</p>
