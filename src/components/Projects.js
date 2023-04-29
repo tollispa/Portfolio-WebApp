@@ -12,6 +12,11 @@ import img11 from "../ImageOfProjects/11.png"
 import img12 from "../ImageOfProjects/12.png"
 import img13 from "../ImageOfProjects/13.png"
 import img14 from "../ImageOfProjects/14.png"
+import img15 from "../ImageOfProjects/15.png"
+import img16 from "../ImageOfProjects/16.png"
+
+
+
 
 
 
@@ -29,7 +34,7 @@ const [currentIndex4, setCurrentIndex4] = useState(0)
 const [h1Tag, seth1Tag] = useState("Login Page")
 const [h1Tag2, seth1Tag2] = useState("Movie Categories")
 const [h1Tag3, seth1Tag3] = useState("Choose Caterogy")
-const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
+const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
 
 
   const slides = [
@@ -56,7 +61,10 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
   ]
   const slides4 = [
     {url: img13},
-    {url: img14}
+    {url: img14},
+    {url: img15},
+    {url: img16}
+
  
   
   ]
@@ -125,23 +133,28 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
      seth1Tag3("Quiz Wrong answer")
    }
    if(currentIndex3 === 2) {
-     seth1Tag3("Final question")
+     seth1Tag3("Player completed the quiz")
    }
   }
  
   const slideImage4 = () => {
     if (currentIndex4 >= total4 -1){
      setCurrentIndex4(0)
-     seth1Tag4("Easy Game Mode")
+     seth1Tag4("Home page, player chooses difficulty")
      return
       
    }
-   setCurrentIndex4(currentIndex3 +1)
+   setCurrentIndex4(currentIndex4 +1)
  
    if(currentIndex4 === 0) {
-     seth1Tag4("Hard Game Mode")
+     seth1Tag4("Start pairing cards!")
    }
- 
+   if(currentIndex4 === 1) {
+    seth1Tag4("Player gets message that card already paired")
+  }
+  if(currentIndex4 === 2) {
+    seth1Tag4("Player succesfully paired all cards")
+  }
   
   }
 
@@ -156,13 +169,17 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
               </p>
             <img 
             onClick={() => window.location.href='https://github.com/tollispa/Fullstack-App-with-React-SQL-Express'}
-            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"/>
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}
+            className="w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"
+            onMouseOver={(e) => e.target.style.transform = "scale(1.3)"}
+  onMouseOut={(e) => e.target.style.transform = "scale(1)"}
+            />
             <div className="flex flex-col justify-center shadow-lg p-4 rounded sm:mb-10 sm:p-3">
             <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
                 Fullstack project.
               </p>
               <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage}>Next Image</button>
-              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag} <br/><span className="text-black/40">{currentIndex +1}/{total}</span></h1>
+              <h1 className="md:text-xl sm:text-2xl font-bold py-2 m-4 text-blue-400">{h1Tag} <br/><span className="text-black/40">{currentIndex +1}/{total}</span></h1>
               <p className="m-4 font-bold">Built using Nodejs, React, SQL, Express and Axios</p>
               <p className="m-2 shadow-lg p-2 rounded bg-slate-100">This project is a social networking platform that allows users to register an account, login securely, and create a profile page with an avatar. Users can post blogs and interact with other users by sending messages and adding friends. The platform also provides the option to delete friends and manage friend requests. </p>
 
@@ -178,14 +195,19 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
               </p>
             <img 
             onClick={() => window.location.href="https://github.com/tollispa/Netflix-clone"}
-            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"/>
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}
+            className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"
+            onMouseOver={(e) => e.target.style.transform = "scale(1.3)"}
+      
+           onMouseOut={(e) => e.target.style.transform = "scale(1)"}
+            />
            
             <div className="flex flex-col justify-center shadow-lg rounded sm:p-3">
             <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
                Netflix clone.
               </p>
               <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage2}>Next Image</button>
-              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag2} <br/><span className="text-black/40">{currentIndex2 +1}/{total2}</span></h1>
+              <h1 className="md:text-xl sm:text-2xl font-bold py-2 m-4 text-blue-400">{h1Tag2} <br/><span className="text-black/40">{currentIndex2 +1}/{total2}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind & Axios</p>
               <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">This Netflix clone project is a frontend-only project that displays a user interface similar to the popular video streaming service, Netflix. The platform displays a large collection of movies and TV shows, categorized by genre, rating, and popularity, with no backend functionality. Users can click on a specific movie to go to a Single Movie page for more info about that movie.</p>
 
@@ -199,20 +221,26 @@ const [h1Tag4, seth1Tag4] = useState("Easy Game Mode")
               <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
               Quiz App.
               </p>
-            <img 
-            onClick={() => window.location.href="https://github.com/tollispa/javascript-quiz-app"}
-            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides3[`${currentIndex3}`].url} alt="/"/>
-           
+              <img 
+  onClick={() => window.location.href="https://github.com/tollispa/javascript-quiz-app"}
+  style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer", transition: "transform 0.2s"}}
+  className="block w-full rounded h-full mx-auto my-4 ease-in-out duration-500"
+  onMouseOver={(e) => e.target.style.transform = "scale(1.3)"}
+  onMouseOut={(e) => e.target.style.transform = "scale(1)"}
+  src={slides3[`${currentIndex3}`].url}
+  alt="/"
+/>
+
             <div className="flex flex-col justify-center shadow-lg sm:p-4 sm:m-3">
             <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
               Quiz App.
               </p>
               <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage3}>Next Image</button>
-              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag3} <br/><span className="text-black/40">{currentIndex3 +1}/{total3}</span></h1>
+              <h1 className="md:text-xl sm:text-2xl font-bold py-2 m-4 text-blue-400">{h1Tag3} <br/><span className="text-black/40">{currentIndex3 +1}/{total3}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind</p>
               <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">This quiz project is an interactive platform that allows users to test their knowledge on various topics through a quiz. The quiz has multiple categories to choose from, and each category has over 10+ questions. The questions in each category are randomized using a function, ensuring that each user gets a unique set of questions every time they take the quiz.
 
-When a user clicks on a category, they are presented with five questions to answer. After completing the quiz, the user is provided with their score and the option to see their wrong answers, allowing them to learn from their mistakes.</p>
+When a user clicks on a category, they are presented with five questions to answer. After completing the quiz, the user is provided with their score and the option to see their wrong answers, allowing them to learn from their mistakes.  This game application is fully responsive.</p>
 
               
 
@@ -230,16 +258,20 @@ When a user clicks on a category, they are presented with five questions to answ
               </p>
             <img 
             onClick={() => window.location.href="https://github.com/tollispa/Pair-cards-game"}
-            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides4[`${currentIndex4}`].url} alt="/"/>
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}
+            className="block w-full h-full rounded mx-auto my-4 ease-in-out duration-500 transition"src={slides4[`${currentIndex4}`].url} alt="/"
+            onMouseOver={(e) => e.target.style.transform = "scale(1.3)"}
+  onMouseOut={(e) => e.target.style.transform = "scale(1)"}
+            />
            
             <div className="flex flex-col justify-center shadow sm:p-3 sm:m-3 rounded">
             <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-2xl sm:block hidden">
               Picture Pairing Game.
               </p>
               <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage4}>Next Image</button>
-              <h1 className="md:text-4xl sm:text-2xl font-bold py-2 m-4">{h1Tag4} <br/><span className="text-black/40">{currentIndex4 +1}/{total4}</span></h1>
+              <h1 className="md:text-xl sm:text-2xl font-bold py-2 m-4 text-blue-400">{h1Tag4} <br/><span className="text-black/40">{currentIndex4 +1}/{total4}</span></h1>
               <p className=" m-4 font-bold">Built using React & Tailwind</p>
-              <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">In this game the player has to pair 2 pictures that "matches", for each match the "Cards left to pair" goes down. When it reaches 0, that means the player has paired all pictures displaying on the page correctly and the game ends.</p>
+              <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">In this game the player has to pair 2 pictures that "matches", for each match the "Cards left to pair" goes down. When it reaches 0, that means the player has paired all pictures displaying on the page correctly and the game ends. This game application is fully responsive.</p>
 
               
 
