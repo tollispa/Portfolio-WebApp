@@ -1,4 +1,4 @@
-
+import tollisImg from "../ImageOfProjects/BildCV.jpg"
 
 
 
@@ -15,6 +15,8 @@ const Home = () => {
     </svg>
 </div>
       <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+<p><img className="w-40 border-4 rounded-full border-black inline-block" src={tollisImg} alt="/"/></p>
+
 <p className="text-[#00df9a] font-bold p-2 uppercase text-xl">Welcome to my page!</p>
 <h1 className="md:text-6xl sm:text-6xl text4-xl font-bold md:py-6">TOLLIS PAPADOPOULOS</h1>
 
