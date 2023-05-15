@@ -14,21 +14,25 @@ import img13 from "../ImageOfProjects/13.png"
 import img14 from "../ImageOfProjects/14.png"
 import img15 from "../ImageOfProjects/15.png"
 import img16 from "../ImageOfProjects/16.png"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 
 
 
 
 
-
-import { useState} from "react"
-
+import { useState, useEffect} from "react"
 const Projects = () => {
-const [currentIndex, setCurrentIndex] = useState(0)
-const [currentIndex2, setCurrentIndex2] = useState(0)
-const [currentIndex3, setCurrentIndex3] = useState(0)
-const [currentIndex4, setCurrentIndex4] = useState(0)
-
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex2, setCurrentIndex2] = useState(0)
+  const [currentIndex3, setCurrentIndex3] = useState(0)
+  const [currentIndex4, setCurrentIndex4] = useState(0)
+  
+  const fadeAnimation = "fade-right"
+  useEffect(() => {
+    AOS.init({duration: 3000, once: true})
+  },[])
 
 
 const [h1Tag, seth1Tag] = useState("Login Page")
@@ -160,7 +164,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
 
     return (
       <>
-        <div id ="projects"className="w-full bg-white py-0 px-4 border-b-2 border-gray-300">
+        <div id ="projects"className="w-full bg-white py-0 px-4 border-b-2 border-gray-300" >
           <h1 className="text-blue-400 inline-block rounded mb-4 font-bold p-2 uppercase sm:text-2xl text-xl">here are some of my projects.</h1>
          
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
@@ -174,7 +178,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
             onMouseOver={(e) => e.target.style.transform = "scale(1.3)"}
   onMouseOut={(e) => e.target.style.transform = "scale(1)"}
             />
-            <div className="flex flex-col justify-center shadow-lg p-4 rounded sm:mb-10 sm:p-3">
+            <div className="flex flex-col justify-center shadow-lg p-4 rounded sm:mb-10 sm:p-3" data-aos={fadeAnimation}>
             <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
                 Fullstack project.
               </p>
@@ -188,7 +192,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
           </div>
        
       </div>
-      <div className="w-full bg-white py-16 px-4 border-b-2 border-gray-300">
+      <div className="w-full bg-white py-16 px-4 border-b-2 border-gray-300"  >
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
               <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
                Netflix clone.
@@ -202,7 +206,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
            onMouseOut={(e) => e.target.style.transform = "scale(1)"}
             />
            
-            <div className="flex flex-col justify-center shadow-lg rounded sm:p-3">
+            <div className="flex flex-col justify-center shadow-lg rounded sm:p-3 "data-aos={fadeAnimation}>
             <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
                Netflix clone.
               </p>
@@ -231,7 +235,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
   alt="/"
 />
 
-            <div className="flex flex-col justify-center shadow-lg sm:p-4 sm:m-3">
+            <div className="flex flex-col justify-center shadow-lg sm:p-4 sm:m-3" data-aos={fadeAnimation}>
             <p className="text-[#00df9a] uppercase font-bold sm:text-2xl text-xl hidden sm:block">
               Quiz App.
               </p>
@@ -251,7 +255,7 @@ When a user clicks on a category, they are presented with five questions to answ
           </div>
        
       </div>
-      <div className="w-full bg-white py-16 px-4">
+      <div className="w-full bg-white py-16 px-4" >
           <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
               <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-4xl sm:hidden">
               Picture Pairing Game.
@@ -264,7 +268,7 @@ When a user clicks on a category, they are presented with five questions to answ
   onMouseOut={(e) => e.target.style.transform = "scale(1)"}
             />
            
-            <div className="flex flex-col justify-center shadow sm:p-3 sm:m-3 rounded">
+            <div className="flex flex-col justify-center shadow sm:p-3 sm:m-3 rounded" data-aos={fadeAnimation}>
             <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-2xl sm:block hidden">
               Picture Pairing Game.
               </p>
