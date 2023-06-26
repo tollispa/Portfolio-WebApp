@@ -16,7 +16,7 @@ const Footer = () => {
 <FaLinkedin style={{color: "#0077B5"}}size={40}/>
 
     </a>
-    <a href="#">
+    <a>
  
 <FaInstagram style={{color: "#E1306C"}}size={40}/>
 </a>
