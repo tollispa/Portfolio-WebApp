@@ -5,15 +5,14 @@ import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 
 
-
-
 function App() {
+
   return (
     
     <div className="App">
-      <Navbar/>
+      <Navbar data-aos="fade-up"/>
        <Home/>
-       <Skills/>
+       <Skills data-aos="fade-right"/>
        <Projects/>
        <Footer/>
       
