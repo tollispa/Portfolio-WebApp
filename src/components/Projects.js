@@ -14,6 +14,17 @@ import img13 from "../ImageOfProjects/13.png"
 import img14 from "../ImageOfProjects/14.png"
 import img15 from "../ImageOfProjects/15.png"
 import img16 from "../ImageOfProjects/16.png"
+import img17 from "../ImageOfProjects/17.png"
+import img18 from "../ImageOfProjects/18.png"
+import img19 from "../ImageOfProjects/19.png"
+import img20 from "../ImageOfProjects/20.png"
+import img21 from "../ImageOfProjects/21.png"
+import img22 from "../ImageOfProjects/22.png"
+import img23 from "../ImageOfProjects/23.png"
+import img24 from "../ImageOfProjects/24.png"
+
+
+
 import AOS from "aos"
 import "aos/dist/aos.css"
 
@@ -28,10 +39,14 @@ const Projects = () => {
   const [currentIndex2, setCurrentIndex2] = useState(0)
   const [currentIndex3, setCurrentIndex3] = useState(0)
   const [currentIndex4, setCurrentIndex4] = useState(0)
+  const [currentIndex5, setCurrentIndex5] = useState(0)
+
   
-  const fadeAnimation = "fade-right"
+  const fadeAnimation = "fade-down"
+  const fadeAnimationImage = "fade-up"
+
   useEffect(() => {
-    AOS.init({duration: 3000, once: true})
+    AOS.init({duration: 1500, once: true})
   },[])
 
 
@@ -39,6 +54,8 @@ const [h1Tag, seth1Tag] = useState("Login Page")
 const [h1Tag2, seth1Tag2] = useState("Movie Categories")
 const [h1Tag3, seth1Tag3] = useState("Choose Caterogy")
 const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
+const [h1Tag5, seth1Tag5] = useState("All the ads from users")
+
 
 
   const slides = [
@@ -68,16 +85,26 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
     {url: img14},
     {url: img15},
     {url: img16}
+]
 
- 
-  
-  ]
+const slides5 = [
+  {url: img17},
+  {url: img18},
+  {url: img19},
+  {url: img20},
+  {url: img21},
+  {url: img22},
+  {url: img23},
+  {url: img24}
+]
 
 
   const total = slides.length
   const total2 = slides2.length
   const total3 = slides3.length
   const total4 = slides4.length
+  const total5 = slides5.length
+
  
 
   const slideImage = () => {
@@ -148,6 +175,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
      return
       
    }
+   
    setCurrentIndex4(currentIndex4 +1)
  
    if(currentIndex4 === 0) {
@@ -161,6 +189,41 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
   }
   
   }
+console.log(currentIndex5)
+  const slideImage5 = () => {
+    if (currentIndex5 >= total5 -1){
+     setCurrentIndex5(0)
+     seth1Tag5("All ads from users")
+     return
+      
+   }
+   
+   setCurrentIndex5(currentIndex5 +1)
+ 
+   if(currentIndex5 === 0) {
+     seth1Tag5("Here you can click on the ad and send a message")
+   }
+   if(currentIndex5 === 1) {
+    seth1Tag5("How it looks when you send a message about the ad")
+  }
+  if(currentIndex5 === 2) {
+    seth1Tag5("Simple login page")
+  }
+  if(currentIndex5 === 3) {
+    seth1Tag5("Here you can see all your messages, also click on a specific one")
+  }
+  if(currentIndex5 === 4) {
+    seth1Tag5("Here you can see a single message page, where you can answer with a message")
+  }
+  if(currentIndex5 === 5) {
+    seth1Tag5("Here you can create ads")
+  }
+  if(currentIndex5 === 6) {
+    seth1Tag5("Home Page")
+  }
+ 
+  
+  }
 
     return (
       <>
@@ -171,7 +234,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
           <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
                 Fullstack project.
               </p>
-            <img 
+            <img data-AOS={fadeAnimationImage}
             onClick={() => window.location.href='https://github.com/tollispa/Fullstack-App-with-React-SQL-Express'}
             style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}
             className="w-full h-full mx-auto my-4 rounded duration-500"src={slides[`${currentIndex}`].url} alt="/"
@@ -197,7 +260,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
               <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
                Netflix clone.
               </p>
-            <img 
+            <img data-AOS={fadeAnimationImage}
             onClick={() => window.location.href="https://github.com/tollispa/Netflix-clone"}
             style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}
             className="block w-full h-full mx-auto my-4 ease-in-out duration-500 transition"src={slides2[`${currentIndex2}`].url} alt="/"
@@ -225,7 +288,7 @@ const [h1Tag4, seth1Tag4] = useState("Home Page, choose difficulty")
               <p className="text-[#00df9a] uppercase font-bold sm:text-4xl text-xl sm:hidden">
               Quiz App.
               </p>
-              <img 
+              <img data-AOS={fadeAnimationImage}
   onClick={() => window.location.href="https://github.com/tollispa/javascript-quiz-app"}
   style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer", transition: "transform 0.2s"}}
   className="block w-full rounded h-full mx-auto my-4 ease-in-out duration-500"
@@ -260,7 +323,7 @@ When a user clicks on a category, they are presented with five questions to answ
               <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-4xl sm:hidden">
               Picture Pairing Game.
               </p>
-            <img 
+            <img data-AOS={fadeAnimationImage}
             onClick={() => window.location.href="https://github.com/tollispa/Pair-cards-game"}
             style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}
             className="block w-full h-full rounded mx-auto my-4 ease-in-out duration-500 transition"src={slides4[`${currentIndex4}`].url} alt="/"
@@ -280,6 +343,37 @@ When a user clicks on a category, they are presented with five questions to answ
               
 
               <a className="text-blue-400 underline" href="https://fascinating-gecko-27250f.netlify.app/?fbclid=IwAR2q2PXpdJb4NVabtbiyXdeeHfyrLYtk6NgG4qcMUyVit1VVWbxgb0GUv4Y" target="_blank" rel="noopener noreferrer">Go to Picture Pair Game website</a>
+
+            </div>
+
+          </div>
+       
+      </div>
+      <div className="w-full bg-white py-16 px-4" >
+          <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
+              <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-4xl sm:hidden">
+              Blocket fullstack app.
+              </p>
+            <img data-AOS={fadeAnimationImage}
+            onClick={() => window.location.href="https://github.com/tollispa/Pair-cards-game"}
+            style={{objectFit: "contain", maxHeight: "280px", minHeight:"280px", cursor: "pointer"}}
+            className="block w-full h-full rounded mx-auto my-4 ease-in-out duration-500 transition"src={slides5[`${currentIndex5}`].url} alt="/"
+            onMouseOver={(e) => e.target.style.transform = "scale(1.3)"}
+  onMouseOut={(e) => e.target.style.transform = "scale(1)"}
+            />
+           
+            <div className="flex flex-col justify-center shadow sm:p-3 sm:m-3 rounded" data-aos={fadeAnimation}>
+            <p className="text-[#00df9a] uppercase font-bold text-xl sm:text-2xl sm:block hidden">
+              Blocket fullstack app.
+              </p>
+              <button className="bg-blue-300 hover:bg-blue-400 w-36 text-white rounded py-4 m-4 font-bold" onClick={slideImage5}>Next Image</button>
+              <h1 className="md:text-xl sm:text-2xl font-bold py-2 m-4 text-blue-400">{h1Tag5} <br/><span className="text-black/40">{currentIndex5 +1}/{total5}</span></h1>
+              <p className=" m-4 font-bold">Built using React, Tailwind, MUI, MongoDB</p>
+              <p className=" m-2 shadow-lg p-2 rounded bg-slate-100">In this fullstack blocket app, the user can create and login on accounts. You can see create adds when logged in, also message people about their adds. You can delete and edit your own adds. The DB I'm using for storage is MongoDB</p>
+
+              
+ 
+          
 
             </div>
 
